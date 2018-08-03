@@ -1,0 +1,429 @@
+/*
+	namu-senkawa dark mode stylesheet
+
+	Copyright (c) 2015, PPPP@namuwiki. All rights reserved.
+	Some css written by kasio@namuwiki or ztirf@namuwiki.
+*/
+
+@charset "UTF-8";
+
+/* -- global start --*/
+body.senkawa.dark {
+	background-color: #000000;
+}
+/* -- global end */
+
+
+/* -- navbar start -- */
+.senkawa.dark .navbar-wrapper {
+	background-color: #373A3C;
+}
+
+.senkawa.dark .navbar {
+	background-color: #373A3C;
+}
+
+.senkawa.dark .navbar-nav .nav-link:hover {
+	background-color: #325A56;
+}
+
+.senkawa.dark .navbar .dropdown-menu {
+	background-color: #373A3C;
+	border: 1px solid #ccc;
+}
+
+.senkawa.dark .navbar .dropdown-menu:after {
+	border-bottom-color: #373A3C;
+}
+
+.senkawa.dark .navbar .dropdown-menu .dropdown-item {
+	color: #ddd;
+}
+
+.senkawa.dark .navbar .dropdown-menu .dropdown-item:hover {
+	background-color: #212121;
+}
+
+.senkawa.dark .navbar .search-box input {
+	background-color: #373A3C;
+	color: #ddd;
+}
+
+.senkawa.dark .navbar .search-box .btn {
+	color: #ddd;
+	background-color: #373A3C;
+}
+
+.senkawa.dark .navbar .user-dropdown .user-info:hover {
+	background-color: #212121;
+}
+/* -- navbar end -- */
+
+
+/* -- article start -- */
+.senkawa.dark .wiki-article {
+	background-color: #000000;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article > h1.title > a {
+	color: white;
+}
+
+.senkawa.dark .wiki-article > footer {
+	background-color: #000000;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article .wiki-article-menu a {
+	background-color: #343434;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article .wiki-article-menu a.discuss-bold {
+	background-color: #325A56;
+}
+
+.senkawa.dark .wiki-article .wiki-article-menu a.discuss-bold:hover {
+	background-color: #438A83;
+}
+
+.senkawa.dark .wiki-article .wiki-article-menu a:hover {
+	background-color: #111111;
+}
+
+.senkawa.dark .wiki-article table {
+	background-color: #000000;
+}
+
+.senkawa.dark .wiki-article table th {
+	background-color: #1d1d1d;
+}
+
+.senkawa.dark .wiki-content table {
+	color: black;
+	background-color: #F5F5F5;
+}
+
+/*	filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
+	-ms-filter: invert(100%);*/
+}
+
+/*.senkawa.dark .wiki-article table img,
+.senkawa.dark .wiki-article table embed,
+.senkawa.dark .wiki-article table iframe,
+.senkawa.dark .wiki-article table a {
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
+	-ms-filter: invert(100%);
+}*/
+
+.senkawa.dark .wiki-article table a > img {
+	filter: unset;
+	-webkit-filter: unset;
+	-moz-filter: unset;
+	-o-filter: unset;
+	-ms-filter: unset;
+}
+
+.senkawa.dark .wiki-content table.wiki-closure {
+	background-color: transparent;
+	color: #ddd;
+}
+
+.senkawa.dark .breadcrumb.link-nav {
+	background-color: #212121;
+	border: 1px solid #ccc;
+}
+
+.senkawa.dark .wiki-article .form-group select {
+	background-color: #000000;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article .site-notice {
+	color: black;
+}
+
+.senkawa.dark .live-topbar-area {
+	background-color: #da4400;
+	color: #ddd;
+	border-bottom-color: white;
+}
+
+.senkawa.dark .live-topbar-area a {
+	color: #ddd;
+}
+/* -- article end -- */
+
+
+/* -- footer start -- */
+.senkawa.dark .footer-wrapper {
+	background-color: #000000;
+}
+
+.senkawa.dark .footer {
+    color: #ddd;
+}
+/* -- footer end -- */
+
+
+/* -- wiki content start -- */
+/*.senkawa.dark .wiki-article code {
+	color: #ddd;
+}*/
+
+.senkawa.dark .wiki-article pre {
+	background-color: #333;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article .syntax-wrapper {
+	background-color: #444;
+}
+
+.senkawa.dark .wiki-article .syntax-wrapper > pre {
+	background: transparent;
+}
+
+.senkawa.dark .wiki-article .syntax-wrapper > .syntax-lines {
+	background: #476ca1;
+}
+
+.senkawa.dark .wiki-content table caption {
+	color: #ddd;
+}
+
+
+.senkawa.dark .wiki-article table.diff tbody th {
+	background:#112;
+	border:1px solid #443;
+	color:#779;
+}
+
+.senkawa.dark .wiki-article table.diff thead {
+	border-bottom:1px solid #443;
+	background:#101010;
+}
+
+.senkawa.dark .wiki-article table.diff .empty {
+	background-color:#222;
+}
+
+.senkawa.dark .wiki-article table.diff .replace {
+	background-color:#028;
+}
+
+.senkawa.dark .wiki-article table.diff .delete {
+	background-color:#044;
+}
+
+.senkawa.dark .wiki-article table.diff .skip {
+	background-color:#101010;
+	border:1px solid #555;
+	border-right:1px solid #443;
+}
+
+.senkawa.dark .wiki-article table.diff .insert {
+	background-color:#404;
+}
+
+.senkawa.dark .wiki-article table.diff th.author {
+	border-top:1px solid #443;
+	background:#101010
+}
+
+.senkawa.dark .wiki-article ins.diff {
+	background-color: #af00af;
+}
+
+.senkawa.dark .wiki-article del.diff {
+	background-color: #000;
+	color: #666;
+}
+
+.senkawa.dark .wiki-article a:not([class]),
+.senkawa.dark .wiki-article a.wiki-link-anchor,
+.senkawa.dark .sidebar a:not([class]),
+.senkawa.dark .wiki-article a.wiki-link-internal,
+.senkawa.dark .wiki-article a.wiki-fn-content,
+.senkawa.dark .wiki-article a.wiki-self-link,
+.senkawa.dark .sidebar a.wiki-link-internal,
+.senkawa.dark .footer a:not([class]) {
+	color: #ca8817;
+}
+
+.senkawa.dark .wiki-content a.wiki-link-external {
+	color: #5EA4A7;
+}
+
+.senkawa.dark .wiki-content a.wiki-link-external:before {
+	background-color: #5EA4A7;
+}
+
+.senkawa.dark .wiki-article a.not-exist {
+	color: #C30000;
+}
+
+.senkawa.dark .wiki-article .res .r-head {
+	background-color: #2a2a2a;
+}
+
+.senkawa.dark .wiki-article .res .r-head.first-author {
+	background-color: #405640;
+}
+
+.senkawa.dark .wiki-article .res .r-body {
+	background-color: #0b0b0b;
+}
+
+.senkawa.dark .wiki-article .res .wiki-quote {
+	background-color: #010101;
+}
+
+.senkawa.dark .wiki-article .wiki-quote {
+	background-color: #444;
+}
+
+.senkawa.dark .wiki-content .wiki-unfold-fn {
+	background-color: #444;
+	color: #ddd;
+}
+/* -- wiki content end -- */
+
+
+/* -- discuss start -- */
+.senkawa.dark .wiki-article .more-box {
+	background-color: #325A56;
+	color: #ddd;
+}
+
+.senkawa.dark .wiki-article .more-box:hover {
+	background-color: #438A83;
+}
+/* -- discuss end -- */
+
+
+/* -- sidebar start -- */
+.senkawa.dark .sidebar .card {
+	background-color: black;
+	color: #ddd;
+}
+
+.senkawa.dark .sidebar .card .card-title,
+.senkawa.dark .recent-card .link-table a:hover,
+.senkawa.dark .recent-card a.more-link {
+	background-color: black;
+}
+
+.senkawa.dark .recent-card a.more-link {
+	color: white;
+}
+
+.senkawa.dark .recent-card .link-table a span {
+	color: #ddd;
+}
+/* -- sidebar end -- */
+
+
+/* -- settings start -- */
+.senkawa.dark .settings-nav .nav-pills .nav-link {
+	color: #ddd;
+}
+/* -- settings end -- */
+
+
+/* -- mypage start -- */
+.senkawa.dark .mypage-nav .nav-pills .nav-link {
+	color: #ddd;
+}
+/* -- mypage end -- */
+
+
+/* -- nav-control start -- */
+.senkawa.dark .nav-control {
+	background-color: #373A3C;
+}
+/* -- nav-controls end -- */
+
+
+/* -- modal start -- */
+.senkawa.dark .modal .modal-content {
+	background-color: #444;
+	color: #ddd;
+}
+
+.senkawa.dark .modal .modal-header {
+	border-bottom: 1px solid #aaa;
+}
+
+.senkawa.dark .modal .modal-footer {
+	border-top: 1px solid #aaa;
+}
+
+.senkawa.dark .modal#footnoteModal .modal-footer .btn {
+	background-color: #555;
+}
+
+.senkawa.dark .modal .close {
+	color: white;
+	opacity: 0.6;
+}
+/* -- modal end -- */
+
+
+/* -- bootstrap fix start -- */
+.senkawa.dark input,
+.senkawa.dark textarea {
+	background-color: #000000;
+	color: #ddd;
+}
+
+.senkawa.dark .btn-secondary {
+	color: #ddd;
+	background-color: #333;
+}
+
+.senkawa.dark .btn-secondary:hover {
+	background-color: #555;
+}
+
+.senkawa.dark .table-hover tbody tr:hover {
+	background-color: #333;
+}
+/* -- bootstrap fix end -- */
+
+
+/* -- nprogress fix start -- */
+.senkawa.dark #nprogress .bar {
+	background: white;
+}
+/* -- nprogress fix end -- */
+
+
+/* -- jquery ui fix start -- */
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete {
+	border: 1px solid #ccc;
+	background: #222;
+	color: #ddd;
+}
+
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete li.ui-menu-item {
+	background: #555;
+}
+
+.senkawa.dark ul.ui-widget-content.ui-menu.ui-autocomplete li.ui-menu-item.ui-state-focus {
+	color: #ccc;
+	background: #777;
+
+	border: 1px solid #ccc;
+}
+.senkawa.dark .wiki-document-namespace {
+	color: #c7c7c7;
+}
+/* -- jquery ui fix end -- */

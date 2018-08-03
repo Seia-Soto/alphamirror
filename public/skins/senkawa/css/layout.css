@@ -1,0 +1,1396 @@
+/*
+	namu-senkawa layout stylesheet
+
+	Copyright (c) 2015-2016, PPPP@theseed.io. All rights reserved.
+*/
+
+@charset "UTF-8";
+
+/* -- global start --*/
+html {
+	-ms-overflow-style: scrollbar;
+}
+
+html, body, th, td, input, select, textarea, button,
+div, p, h1, h2, h3, h4, h5, h6,
+a, span, li {
+	font-family: "Open Sans", arial, 'Apple SD Gothic Neo', 'Noto Sans CJK KR', '본고딕', 'KoPubDotum Medium', '나눔바른고딕', '나눔고딕', 'NanumGothic', '맑은고딕', 'Malgun Gothic', sans-serif;
+}
+
+body, th, td,
+div, p, li {
+	font-size: 0.9rem;
+}
+
+input, select, textarea,
+button, .senkawa .btn {
+	font-size: 0.9rem !important;
+}
+
+body.senkawa {
+	background-color: #EFEFEF;
+}
+
+:focus {
+	outline: none;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+.senkawa .table-wrap {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	margin: 10px 0;
+}
+
+.senkawa .tab-content.bordered {
+	border: 1px solid #ddd;
+	border-top: none;
+}
+/* -- global end */
+
+
+/* -- navbar start -- */
+.senkawa .navbar-wrapper {
+	background-color: #bcbcbc;
+	z-index: 91001;
+}
+
+.senkawa .navbar {
+	padding: 0 1rem;
+	font-size: 1rem;
+	background-color: #bcbcbc;
+}
+
+.senkawa .navbar .navbar-brand {
+	margin-right: 0.7rem;
+}
+
+@media screen and (max-width: 420px) {
+	.senkawa .navbar .navbar-brand {
+		margin-right: 0.3rem;
+	}
+}
+
+.senkawa .navbar .wiki-logo {
+	height: 2.6rem;
+	width: 6.6rem;
+
+/*	background: transparent url("../img/namuwiki_logo_kor_white_small.png") no-repeat scroll center center / auto 35px;*/
+
+	padding: 0;
+}
+
+.senkawa .navbar-nav .nav-item {
+	padding: 0;
+}
+
+.senkawa .navbar-nav .nav-item + .nav-item {
+	margin-left: 0.2rem;
+}
+
+.senkawa .navbar-nav .icon:before {
+	min-width: 1em;
+	text-align: center;
+}
+
+.senkawa .navbar-nav .icon-title {
+	margin-left: 0.3rem;
+}
+
+.senkawa .navbar-nav .nav-link {
+	color: white;
+	font-size: 1rem;
+	padding: 0.6rem 0.7rem 0.5rem 0.7rem;
+}
+
+.senkawa .navbar-nav .nav-link:hover {
+	background-color: #919191;
+	color: white;
+}
+
+/* small tablet */
+@media screen and (max-width: 42em) {
+	.senkawa .navbar-nav .icon {
+		margin-right: 0;
+	}
+
+	.senkawa .navbar-nav .nav-item + .nav-item {
+		margin-left: 0;
+	}
+
+	.senkawa .navbar-nav .nav-link {
+		padding: 0.6rem 0.9rem 0.5rem 0.9rem;
+	}
+
+	.senkawa .navbar-nav .nav-link > .icon-title {
+		display: none;
+	}
+}
+
+/* phone */
+@media screen and (max-width: 420px) {
+	.senkawa .navbar {
+		padding: 0 0.3rem;
+	}
+
+	.senkawa .navbar-nav .nav-link {
+		padding: 0.6rem 0.5rem 0.5rem 0.5rem;
+	}
+
+	.senkawa .navbar .search-box-parent {
+		margin: 0 0.7rem;
+	}
+}
+
+.senkawa .navbar .search-box {
+	float: right;
+}
+
+.senkawa .navbar .search-box input {
+	width: 220px;
+	height: 2.62rem;
+
+	border-radius: 0;
+}
+
+.senkawa .navbar .search-box .btn {
+	height: 2.62rem;
+
+	color: black;
+	font-size: 1.2rem !important;
+
+	padding: 0.25rem 0.5rem;
+
+	border-radius: 0;
+	border-right: 1px solid #CCC;
+
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC; /* 0.0625rem */
+}
+
+.senkawa .navbar .search-box .right-search-btns .btn:first-of-type {
+	margin-left: 0;
+	border-left: 0;
+}
+
+@media screen and (max-width: 42em) {
+	.senkawa .navbar .search-box .left-search-btns .btn:first-of-type {
+		margin-left: 0;
+		border-left: 0;
+	}
+}
+
+/* tablet */
+@media screen and (max-width: 1020px) {
+	.senkawa .navbar .search-box {
+		float: left;
+		width: calc(100% + 2rem);
+		margin-left: -1rem;
+		display: table !important;
+		height: 2rem !important;
+	}
+
+	.senkawa .navbar .search-box input {
+		width: 100%;
+		height: 2.2rem;
+	}
+
+	.senkawa .navbar .search-box .input-group-btn {
+		width: 1%;
+	}
+
+	.senkawa .navbar .search-box .btn {
+		height: 2.2rem;
+		padding: 0.15rem 0.5rem 0.35rem 0.5rem;
+	}
+
+	.senkawa .navbar .search-box .btn:last-of-type {
+		border-right: 0;
+	}
+}
+
+.senkawa .navbar .user-menu-parent,
+.senkawa .navbar .user-menu-parent > a {
+	width: 42px;
+	height: 42px;
+}
+
+.senkawa .navbar .user-menu-parent {
+	margin-left: 0.5rem;
+}
+
+.senkawa .navbar .user-menu {
+	display: inline-block;
+
+	padding: 0;
+}
+
+/*.senkawa .navbar .user-menu:hover {
+	background-color: transparent;
+}*/
+
+.senkawa .navbar .user-menu .icon {
+	display: inline-block;
+
+	font-size: 1.4rem;
+	text-align: center;
+
+	width: 2.4rem;
+
+	padding-top: 0.3rem;
+	padding-left: 0.3rem;
+
+	margin-right: 0px;
+	margin-bottom: 0.1rem;
+}
+
+.senkawa .navbar .user-menu:after {
+	margin-left: 0;
+
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+}
+
+.senkawa .navbar .user-menu .user-img {
+	width: 42px;
+	height: 42px;
+}
+
+.senkawa .navbar .dropdown-menu {
+	margin-top: 1rem;
+
+	font-size: 0.9rem;
+
+	border-radius: 0;
+
+	left: -0.2rem;
+}
+
+.senkawa .navbar .dropdown-menu.right {
+	left: auto;
+	right: -6px;
+}
+
+.senkawa .navbar .dropdown-menu.user-dropdown.right {
+	right: 0;
+}
+
+
+.senkawa .navbar .dropdown-menu:after,
+.senkawa .navbar .dropdown-menu:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.senkawa .navbar .dropdown-menu:after {
+	border-bottom-color: white;
+	border-width: 10px;
+
+	left: 1.25rem;
+	right: auto;
+}
+
+.senkawa .navbar .dropdown-menu:before {
+	border-bottom-color: #CCC;
+	border-width: 11px; /* 0.6875rem */
+
+	left: 1.2rem;
+	right: auto;
+}
+
+.senkawa .navbar .dropdown-menu.right:after {
+	left: auto;
+	right: 10px;
+}
+
+.senkawa .navbar .dropdown-menu.right:before {
+	left: auto;
+	right: 9px;
+}
+
+.senkawa .navbar .user-dropdown .user-info:hover {
+	background-color: white;
+}
+
+.senkawa .navbar .user-dropdown .user-info .user-info {
+	margin-right: -0.5rem;
+	line-height: 20px;
+	text-align: right;
+}
+
+.senkawa .navbar .user-dropdown .user-info .user-info div {
+	font-size: 0.8rem;
+}
+
+.senkawa .navbar .user-dropdown .user-info .user-info div:first-of-type {
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+/* -- navbar end -- */
+
+
+/* -- footer start -- */
+.senkawa .footer-wrapper {
+	background-color: white;
+	border-top: 1px solid #ccc;
+}
+
+.senkawa .footer {
+	margin: 0 auto;
+	padding: 1rem 1rem;
+
+	text-align: center;
+}
+
+.senkawa .footer p {
+	margin-bottom: 0.5rem;
+}
+
+.senkawa .footer p:last-of-type {
+	margin-bottom: 0;
+}
+
+.senkawa .footer .sep:before {
+	content: '|';
+	margin: 0 0.5rem;
+	color: #aaa;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .footer {
+		padding-bottom: 3rem;
+	}
+}
+/* -- footer end -- */
+
+
+/* -- sidebar start --*/
+.senkawa .sidebar {
+	float: right;
+	width: 17rem;
+
+	margin: 1rem 1rem 1rem 0;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .sidebar {
+		display: none;
+	}
+}
+
+.senkawa .sidebar.has-site-notice {
+	/*margin-top: 3rem;*/
+}
+
+.senkawa .sidebar .card {
+	background-color: white;
+	border-color: #ccc;
+	border-radius: 0;
+}
+
+.senkawa .sidebar .card {
+	padding: 0;
+}
+
+.senkawa .sidebar .card .card-title {
+	margin: 1.25rem;
+}
+
+.senkawa .sidebar .card .link-table a {
+	display: block;
+	padding: 0.3rem 3.3rem 0.3rem 0.5rem;
+	border-top: 1px solid #ccc;
+
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+.senkawa .sidebar .card .link-table a:last-of-type {
+	border-bottom: 1px solid #ccc;
+}
+
+.senkawa .sidebar .card .link-table a span {
+	float: right;
+	margin-right: -2.8rem;
+	color: black;
+}
+
+.senkawa .sidebar .card a.more-link {
+	display: block;
+	text-align: right;
+	padding: 0.5rem 0.7rem;
+}
+
+.senkawa .sidebar .card a:hover {
+	background-color: #FCFCFC;
+	text-decoration: none;
+}
+
+.senkawa .sidebar .card.live-list-card .link-table a {
+	padding-right: 0.3rem;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: normal;
+	white-space: nowrap;
+}
+/* -- sidebar end --*/
+
+
+/* -- article start -- */
+.senkawa .wiki-article {
+	margin: 0 095rem 0 095rem 0;
+	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+	min-height: 35rem;
+
+	background-color: white;
+
+	border-right: 1px solid #ccc;
+	/*border-bottom: 1px solid #ccc;*/
+
+	word-break: break-all;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .wiki-article {
+		padding: 0.7rem;
+		margin: 0;
+		border: 0 !important; /* for additional classes... */
+	}
+}
+
+.senkawa .wiki-article .site-notice {
+	background-color: #F0EF75;
+	padding: 0.3rem 1rem;
+	/*margin: -1.5rem -20.5rem 1.5rem -1.5rem;*/
+	margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+	border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .wiki-article .site-notice {
+		margin: -0.7rem -0.7rem 0.7rem -0.7rem;
+		padding: 0.2rem 0.7rem;
+	}
+}
+
+.senkawa .live-topbar-area {
+	padding: 0.3rem 0.7rem;
+
+	background-color: #ffb00e;
+	color: white;
+	word-break: break-all;
+
+	border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+@media screen and (min-width: 1021px) {
+	.senkawa .live-topbar-area {
+		display: none;
+	}
+}
+
+.senkawa .live-topbar-area a {
+	color: white;
+}
+
+.senkawa .live-topbar-area a:hover {
+	text-decoration: none;
+}
+
+.senkawa .leaf-info {
+	font-family: "Monospace";
+	color: white;
+	font-size: 0.8em;
+	border-radius: 0.3rem;
+	background: #ef6908;
+	padding: 0 0.3rem;
+	margin-top: 0.2rem;
+	margin-right: 0.2rem;
+}
+
+.senkawa .wiki-article .alert {
+	margin-bottom: 0.7rem;
+}
+
+.senkawa .wiki-article .alert.last {
+	margin-bottom: 1.4rem;
+}
+
+.senkawa .wiki-article > .title {
+	margin: 0 0 2rem 0;
+
+	font-weight: bold;
+}
+
+.senkawa .wiki-article > h1.title {
+	font-size: 2.2rem;
+}
+
+.senkawa .wiki-article > h1.title > a {
+	color: black;
+}
+
+.senkawa .wiki-article > .title + .wiki-edit-date {
+	font-size: 0.85rem;
+
+	margin-top: -1.8rem;
+	margin-bottom: 1rem;
+
+	text-align: right;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .wiki-article > .title + .wiki-edit-date {
+		margin-top: -1.4rem;
+	}
+}
+
+.senkawa .wiki-article .wiki-article-menu {
+	float: right;
+}
+
+.senkawa .wiki-article .wiki-article-menu a {
+	font-size: 0.9rem;
+	padding: 0.3rem 0.8rem;
+}
+
+.senkawa .wiki-article .wiki-article-menu a.discuss-bold {
+	background-color: #BBEABB;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .wiki-article .wiki-article-menu ~ h1.title {
+		margin-top: 1rem;
+	}
+
+	.senkawa .wiki-article .wiki-article-menu {
+		margin: -0.7rem -0.7rem 0 -0.7rem;
+		border-bottom: 0.0625rem solid #ccc;
+		text-align: right;
+		float: none;
+	}
+
+	.senkawa .wiki-article .wiki-article-menu .btn {
+		border-radius: 0;
+
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+	.senkawa .wiki-article .alert + .wiki-article-menu {
+		border-top: 1px solid #ccc;
+	}
+
+	.senkawa .btn-group > .btn:last-child:not(:first-child) {
+		border-right: 0;
+	}
+}
+
+.senkawa .wiki-article ul:not([class]) {
+	padding-left: 2rem;
+}
+
+.senkawa .wiki-content {
+	min-height: 22rem;
+}
+
+.senkawa .wiki-article tr.no-line + tr td {
+	border-top: 0;
+	padding-top: 0;
+	padding-left: 1.5rem;
+}
+
+.senkawa .wiki-article > footer {
+	border-top: 1px solid gray;
+	margin: 1.5rem 0 0 0;
+	padding: 0.7rem 0 0 0;
+	text-align: right;
+	background-color: white;
+}
+
+.senkawa .wiki-article > footer p:last-of-type {
+	margin-bottom: 0;
+}
+/* -- article end -- */
+
+
+/* -- recent changes start -- */
+.senkawa .wiki-article .recent-option {
+	margin-bottom: 1.4rem;
+}
+
+.senkawa .wiki-article .recent-option .form-group label {
+	margin-right: 0.7rem;
+	line-height: 1.8rem;
+}
+
+.senkawa .wiki-article .recent-option .form-group select {
+	min-width: 10rem;
+	padding: 0.1rem 0.3rem;
+}
+
+.senkawa .wiki-article .recent-option .btns {
+	margin: 1rem 0 0 0;
+	float: none;
+}
+
+@media screen and (min-width: 420px) {
+	.senkawa .wiki-article .recent-option .btns {
+		margin: 0;
+		float: right;
+	}
+}
+/* -- recent changes end -- */
+
+
+/* -- wiki start -- */
+.senkawa .wiki-content .wiki-unfold-fn {
+	background-color: #efefef;
+	color: #555555;
+
+	border: 1px solid #cecece;
+
+	font-size: 0.8rem;
+	margin-left: 0.1rem;
+	margin-right: 0.2rem;
+}
+
+.senkawa .wiki-content .wiki-unfold-fn .wiki-fn-content {
+	font-size: 1em;
+	vertical-align: baseline;
+}
+/* -- wiki end -- */
+
+
+/* -- edit start -- */
+.senkawa .wiki-article #previewFrame {
+	display: block;
+    width: 100%;
+    height: 30rem;
+    border: none;
+}
+
+/*.senkawa .wiki-article .wiki-article-menu + .wiki-article-menu {
+	margin-right: 11rem;
+}*/
+
+.senkawa .wiki-article #editForm #textInput {
+	width: 100%;
+	height: 30rem;
+	border: none;
+}
+/* -- edit end -- */
+
+
+/* -- form start -- */
+.senkawa #uploadForm,
+.senkawa #lostForm {
+	overflow: hidden;
+}
+/* -- form end -- */
+
+
+/* -- upload start -- */
+.senkawa #uploadForm #fakeFileInput[readonly] {
+	background-color: white;
+	cursor: default;
+}
+
+.senkawa #uploadForm #textInput {
+	width: 100%;
+	height: 30rem;
+
+	margin: 0.3rem 0 1rem 0;
+}
+
+.senkawa #uploadForm #uploadBtn {
+	width: 7rem;
+}
+/* -- upload end -- */
+
+
+/* -- login, signup start -- */
+.senkawa .login-form,
+.senkawa .signup-form {
+	width: 100%;
+}
+
+.senkawa .login-form input[type="text"],
+.senkawa .login-form input[type="password"],
+.senkawa .signup-form input[type="text"],
+.senkawa .signup-form input[type="email"],
+.senkawa .signup-form input[type="password"] {
+	width: 100%;
+}
+
+@media screen and (min-width: 34rem) {
+	.senkawa .login-form {
+		width: 28rem;
+		margin: 0 auto;
+	}
+
+	.senkawa .signup-form {
+		width: 34rem;
+		margin: 0 auto;
+	}
+
+	.senkawa .login-form label,
+	.senkawa .signup-form label {
+		display: block;
+	}
+
+	.senkawa .login-form input[type="text"],
+	.senkawa .login-form input[type="password"],
+	.senkawa .signup-form input[type="text"],
+	.senkawa .signup-form input[type="email"],
+	.senkawa .signup-form input[type="password"] {
+		display: inline-block;
+		margin-left: 0.7rem;
+		width: calc(100% - 0.7rem);
+	}
+}
+
+.senkawa form .error-desc {
+	margin-left: 0.7em;
+	color: red;
+}
+
+.senkawa form .btns,
+.senkawa .settings-section .btns {
+	text-align: right;
+	margin-top: 2rem;
+}
+
+.senkawa .login-form button[type="submit"],
+.senkawa .signup-form button[type="submit"] {
+	width: 5rem;
+}
+
+.senkawa .small-doc {
+	border: 1px solid #ccc;
+	overflow: scroll;
+	background-color: white;
+	color: black;
+}
+
+.senkawa .small-doc .small-title {
+	font-size: 1.4rem;
+}
+
+.senkawa .small-doc ul {
+	list-style: none;
+}
+/* -- login end -- */
+
+
+/* -- settings start --*/
+.senkawa .settings-nav {
+	height: 2.6rem;
+
+	margin-bottom: 1.2rem;
+	padding: 0.3rem;
+
+	border: 1px solid #ccc;
+}
+
+.senkawa .settings-nav .nav-pills .nav-link {
+	border-radius: 0;
+	padding: 0.3rem 0.5rem;
+}
+
+.senkawa .settings-nav .nav-pills .nav-item + .nav-item {
+	margin-left: 0.5rem;
+}
+
+.senkawa .settings-section {
+	overflow: hidden;
+}
+
+.senkawa .settings-section h3 {
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.senkawa .settings-section h3:first-of-type {
+	margin-top: 0;
+}
+
+.senkawa .settings-section .form-group .checkbox {
+	padding-left: 1rem;
+}
+
+.senkawa .settings-section .form-group select {
+	margin-left: 1rem;
+	max-width: 16rem;
+}
+
+.senkawa .settings-section .form-group input[type="text"] {
+	margin-left: 1rem;
+	max-width: 22rem;
+}
+
+@media screen and (max-width: 768px) {
+	.senkawa .settings-section .form-group input[type="text"] {
+		width: calc(100% - 2rem);
+	}
+}
+
+.senkawa .settings-section .form-group button {
+	margin-left: 1rem;
+}
+
+.senkawa .settings-section small {
+	font-size: 80% !important;
+}
+/* -- setting end -- */
+
+
+/* -- mypage start -- */
+.senkawa .mypage-nav {
+	float: left;
+
+	width: 13rem;
+
+	margin-bottom: 1.2rem;
+	padding: 0.5rem;
+
+	border: 1px solid #ccc;
+}
+
+.senkawa .mypage-nav .nav-pills .nav-link {
+	border-radius: 0;
+}
+
+.senkawa .mypage-section {
+	margin-left: 14rem;
+}
+
+@media screen and (max-width: 42em) {
+	.senkawa .mypage-nav {
+		float: none;
+		width: auto;
+	}
+
+	.senkawa .mypage-section {
+		margin-left: 0;
+	}
+}
+/* -- mypage end -- */
+
+
+/* -- license start -- */
+.senkawa .license-table {
+	table-layout: fixed;
+}
+
+.senkawa .license-table tr td:first-of-type {
+	text-align: right;
+}
+/* -- license end -- */
+
+
+/* -- search start -- */
+.senkawa .alert.search-help {
+	min-height: 3.2rem;
+	margin-bottom: 0.8rem;
+	overflow: hidden;
+}
+
+.senkawa .alert.search-help .pull-left {
+	line-height: 2.1rem;
+}
+
+.senkawa .search-summary {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 0.9rem;
+}
+
+.senkawa .search-section .search-item {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 1.1rem;
+}
+
+.senkawa .search-section .arrow-circle {
+	background-color: #009888;
+	color: white;
+
+	text-align: center;
+
+	border-radius: 16px;
+
+	padding: 0 8px 1px 9px;
+	margin-right: 4px;
+}
+
+.senkawa .search-section h4 {
+	margin-top: 1.3rem;
+	margin-bottom: 0.9rem;
+}
+
+.senkawa .search-section h4 a {
+	color: black;
+}
+
+.senkawa .search-section h4 a:hover {
+	text-decoration: none;
+}
+
+.senkawa .search-section .search-highlight {
+	background-color: #48AD97;
+	color: white;
+	padding: 0 0.2em;
+	border-radius: 4px;
+}
+
+.senkawa .search-section .pagination > li > a {
+    padding: .4rem .75rem;
+}
+/* -- search end -- */
+
+
+/* -- character start -- */
+.senkawa .wiki-content.character {
+	background-position: right top !important;
+	background-repeat: no-repeat !important;
+}
+
+/* -- character end -- */
+
+
+/* -- nav-control start -- */
+.senkawa .nav-control {
+	position: fixed;
+
+	margin: 0;
+	padding: 0;
+
+	right: 0;
+	bottom: 0;
+
+	list-style-type: none;
+
+	border-bottom: none;
+	border-right: none;
+
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-top-left-radius: 5px;
+
+	background-color: #bcbcbc;
+	opacity: 0.8;
+
+	z-index: 90005;
+}
+
+.senkawa .nav-control li {
+	float: left;
+}
+
+.senkawa .nav-control li a {
+	color: white;
+	font-size: 1.8rem;
+	line-height: 42px;
+	text-align: center;
+
+	width: 40px;
+	height: 40px;
+
+	display: inline-block;
+
+	border-left: 2px dashed #ccc;
+}
+
+.senkawa .nav-control li:first-of-type a {
+	border-left: none;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa .nav-control li a {
+		width: 45px;
+		height: 45px;
+
+		font-size: 2.2rem;
+		line-height: 48px;
+	}
+}
+/* -- nav-controls end -- */
+
+
+/* -- modal start -- */
+.senkawa.modal-open.modal-open-fix {
+	overflow: visible !important;
+	padding-right: 0 !important;
+}
+
+.senkawa.modal-open.modal-open-fix2 {
+	padding-right: 0 !important;
+}
+
+.senkawa.modal-open.modal-open-fix3 {
+	padding-right: 17px !important;
+}
+
+.senkawa .modal#shortcutHelpModal .modal-body dl {
+	margin: 0rem;
+}
+
+.senkawa .modal#shortcutHelpModal .modal-body dt {
+	text-align: right;
+}
+
+.senkawa .modal#shortcutHelpModal .modal-body b {
+	color: #BD4147;
+	background-color: #F7F7F9;
+}
+
+.senkawa .modal#searchModal {
+	left: auto;
+	right: 1.5rem !important;
+}
+
+.senkawa .modal#searchModal .modal-content {
+	border: 0;
+	border-radius: 0;
+}
+
+.senkawa .modal#searchModal .close {
+	top: 4px;
+	position: relative;
+}
+
+.senkawa .modal#searchModal .modal-header {
+	padding: 0.3rem 0.7rem;
+
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 0;
+}
+
+.senkawa .modal#searchModal .modal-body {
+	padding: 1px;
+}
+
+.senkawa .modal#footnoteModal .modal-header {
+	padding: 10px 15px;
+}
+
+.senkawa .modal#footnoteModal .modal-footer {
+	padding: 0;
+}
+
+.senkawa .modal#footnoteModal .modal-footer .btn {
+	border-radius: 0.3rem;
+
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	padding: 7px;
+}
+
+.senkawa .modal#footnoteModal .modal-dialog {
+	position: relative;
+
+	width: 600px;
+	max-width: 600px;
+	margin: 60px auto;
+
+	left: 50%;
+	margin-left: -300px;
+}
+
+@media screen and (max-width: 630px) {
+	.senkawa .modal#footnoteModal .modal-dialog {
+		width: calc(100% - 20px);
+		margin: 60px 10px;
+
+		left: auto;
+	}
+}
+/* -- modal end -- */
+
+
+/* -- additional class start -- */
+.senkawa.fixed-size .wiki-article {
+	border-left: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.fixed-size .wiki-article {
+		border-left: none !important;
+	}
+}
+
+.senkawa.fixed-size.hide-sidebar .wiki-article {
+	margin-right: 0;
+}
+
+/*.senkawa.fixed-size .wiki-article {
+	margin-right: 0;
+}*/
+
+.senkawa.fixed-size .content-wrapper {
+	margin: 0 auto;
+}
+
+.senkawa.fixed-size.fixed-800 .content-wrapper,
+.senkawa.fixed-size.fixed-800 .navbar,
+.senkawa.fixed-size.fixed-800 .footer {
+	max-width: 800px;
+}
+
+.senkawa.fixed-size.fixed-1000 .content-wrapper,
+.senkawa.fixed-size.fixed-1000 .navbar,
+.senkawa.fixed-size.fixed-1000 .footer {
+	max-width: 1000px;
+}
+
+.senkawa.fixed-size.fixed-1100 .content-wrapper,
+.senkawa.fixed-size.fixed-1100 .navbar,
+.senkawa.fixed-size.fixed-1100 .footer {
+	max-width: 1100px;
+}
+
+.senkawa.fixed-size.fixed-1200 .content-wrapper,
+.senkawa.fixed-size.fixed-1200 .navbar,
+.senkawa.fixed-size.fixed-1200 .footer {
+	max-width: 1200px;
+}
+
+.senkawa.fixed-size.fixed-1300 .content-wrapper,
+.senkawa.fixed-size.fixed-1300 .navbar,
+.senkawa.fixed-size.fixed-1300 .footer {
+	max-width: 1300px;
+}
+
+.senkawa.fixed-size.fixed-1500 .content-wrapper,
+.senkawa.fixed-size.fixed-1500 .navbar,
+.senkawa.fixed-size.fixed-1500 .footer {
+	max-width: 1500px;
+}
+
+.senkawa.fixed-size.fixed-1600 .content-wrapper,
+.senkawa.fixed-size.fixed-1600 .navbar,
+.senkawa.fixed-size.fixed-1600 .footer {
+	max-width: 1600px;
+}
+
+.senkawa.fixed-size .navbar {
+	margin: 0 auto;
+}
+
+.senkawa.fixed-size:not(.left-sidebar) .wiki-article .site-notice {
+	/*border-right: 1px solid #ccc;*/
+}
+
+/*.senkawa.fixed-size .sidebar {
+	position: absolute;
+	float: none;
+}
+
+.senkawa.fixed-size.fixed-1000:not(.left-sidebar) .sidebar {
+	margin-left: calc(1000px + 1rem);
+}
+
+.senkawa.fixed-size.fixed-1200:not(.left-sidebar) .sidebar {
+	margin-left: calc(1200px + 1rem);
+}
+
+.senkawa.fixed-size.fixed-1300:not(.left-sidebar) .sidebar {
+	margin-left: calc(1300px + 1rem);
+}*/
+
+/* - fixed size end - */
+
+.senkawa.fixed-navbar .wiki-article .wiki-fn-content .target,
+.senkawa.fixed-navbar .wiki-article .footnote-list .target {
+	position: absolute;
+	margin-top: -40px;
+}
+
+.senkawa.fixed-navbar .wiki-article {
+	margin-top: 2.53rem;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.fixed-navbar .wiki-article {
+		margin-top: 4.83rem;
+	}
+}
+
+.senkawa.fixed-navbar .navbar-wrapper {
+	width: 100%;
+	position: fixed;
+
+	height: 2.6rem;
+	margin-top: -40px;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.fixed-navbar .navbar-wrapper {
+		height: 2.5rem;
+	}
+}
+
+.senkawa.fixed-navbar .navbar {
+	z-index: 90004;
+}
+
+.senkawa.fixed-navbar.modal-open .modal .modal-dialog {
+	margin-top: 60px !important;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.fixed-navbar.modal-open .modal .modal-dialog {
+		margin-top: 90px !important;
+	}
+}
+
+/* - fixed navbar end - */
+
+.senkawa.hide-sidebar .sidebar {
+	display: none;
+}
+
+.senkawa.hide-sidebar:not(.fixed-size) .wiki-article {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.senkawa.hide-sidebar .wiki-article .site-notice {
+	margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.hide-sidebar .wiki-article .site-notice {
+		margin: -0.7rem -0.7rem 0.7rem -0.7rem;
+	}
+}
+
+/* - hide sidebar end - */
+
+.senkawa.nowrap-wiki-table .wiki-article .wiki-table {
+	white-space: nowrap;
+}
+
+/* - nowrap wiki table end - */
+
+.senkawa.left-sidebar .wiki-article {
+	margin-left: 19rem;
+	margin-right: 0;
+	border-left: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1020px) {
+	.senkawa.left-sidebar .wiki-article {
+		margin-left: 0;
+	}
+}
+
+.senkawa.left-sidebar .sidebar {
+	float: left;
+	margin: 1rem 0 1rem 1rem;
+}
+
+.senkawa.left-sidebar .wiki-article .site-notice {
+	/* margin: -1.5rem -1.5rem 1.5rem -20.5rem; */
+	margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+	/*border-left: 1px solid #ccc;*/
+}
+
+.senkawa.left-sidebar .sidebar.has-site-notice {
+	/*margin-top: 3rem;*/
+}
+
+/* -- additional class end -- */
+
+
+/* -- media print start --*/
+@media print {
+	.senkawa .navbar,
+	.senkawa .tab_bar,
+	.senkawa .wiki-article .wiki-article-menu,
+	.senkawa .nav-control,
+	.senkawa .sidebar {
+		display: none !important;
+	}
+
+	.senkawa .wiki-article {
+		margin: 0;
+		border: 0 !important;
+	}
+}
+/* -- media print end --*/
+
+
+/* -- nprogress fix start -- */
+.senkawa #nprogress .bar {
+	background: #BBEABB;
+	position: fixed;
+}
+
+.senkawa #nprogress .peg {
+	box-shadow: 0 0 10px white, 0 0 5px white;
+}
+/* -- nprogress fix end -- */
+
+
+/* -- utils start -- */
+.senkawa .line-break {
+	display: block;
+
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+/* -- utils end -- */
+
+
+/* -- css fix start -- */
+.senkawa table.diff tbody th {
+	white-space: nowrap;
+}
+/* -- css fix end -- */
+
+.senkawa .modal del,
+.senkawa .popover del {
+  color: gray;
+}
+
+.senkawa .modal .not-exists,
+.senkawa .popover .not-exists {
+  color: red;
+}
+
+.senkawa .modal .not-exists,
+.senkawa .popover .not-exists {
+  font-weight: bold;
+}
+
+.senkawa .modal .wiki-link-external,
+.senkawa .popover .wiki-link-external {
+  color: #090;
+}
+
+.senkawa .modal img,
+.senkawa .popover img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+
+/* -- google ad start -- */
+#div-gpt-ad-1449622106273-0 {
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+/* -- google ad end -- */
